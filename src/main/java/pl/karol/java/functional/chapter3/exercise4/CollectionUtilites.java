@@ -41,5 +41,11 @@ public class CollectionUtilites {
         return new ArrayList<>(list);
     }
 
+    public static <T> List<T> addend(List<T> list, T t) {
+        List<T> copy = copy(list);
+        copy.add(t);
+        return Collections.unmodifiableList(copy);
+    }
+
 }
 
